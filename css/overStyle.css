@@ -1,0 +1,12 @@
+/*css over*/
+.logo-img{
+    border-radius: 20px;
+    width: 40px;
+    margin-top: 10%;
+}
+.logo-logo{
+    text-align: center;
+}
+#logo-container{
+    height: 64px;
+}
