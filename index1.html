@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/portfoliostyle.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>Power-net</title>
+    <style>
+        .list-item {
+            color: red;
+        }
+
+        #javaimage img {
+            width: 300px;
+        }
+
+        .personal li {
+            display: list-item;
+        }
+
+        #my_books li {
+            display: list-item;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Du und Ich sind Wir</a>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="portfolio/index.html">Portfolio</a>
+            </li>
+            <li>
+                <a href="../alan-omar/index.html">Alan Omer</a>
+            </li>
+        </ul>
+
+    </nav>
+    <hr class="hr">
+    <h2>{POWER.CODERS}</h2>
+    <h2>IST NEUE ENERGIE</h2>
+    <p class="maintext">Ich bin sehr glücklich, am Projekt "Powercoders" teilnehmen zu dürfen. Ich gewinne hier Programmierfähigkeiten und gleichzeitig lerne ich viele, wichtige Leute aus diesem Bereich kennen, welche mir hoffentlich Türen öffnen werden. Das Programm lässt mich endlich den ersten Schritt in meine Zukunft in der Schweiz machen, indem es mir neue Perspektiven eröffnet. An dieser Stelle, anlässlich meiner ersten Aufgabe, möchte ich mich ganz herzlich beim ganzen Team bedanken. <br/> </p>
+    <img class="aleppo" src="portfolio/images/powercoders.png" alt="hawar" style="width:100%;height:100%">
+    <p> mehr information: <a class="buro" href="http://powercoders.org/" target="_blank">Power-coders</a></p>
+    <div class="personal">
+        <ul>
+            <li>Nickname: <span id="nickname"></span> </li>
+            <li>Favorites: <span id="favorites"></span></li>
+            <li>Hometown: <span id="hometown"></span></li>
+        </ul>
+    </div>
+
+    <div id="javaimage">
+
+    </div>
+    <ul id="my_books">
+
+    </ul>
+    <hr class="hr">
+    <footer>
+        <p>
+            ©2017 Power.com |
+            <a href="http://intensivstation.ch">INTENSIVSTATION</a> |
+            <a href="https://www.facebook.com/basharsaid2016">FACEBOOK</a> |
+            <a href="https://www.instagram.com/beshar1984/">INSTAGRAM</a>
+        </p>
+    </footer>
+    <script>
+        document.body.style.fontFamily = "Arial, sans-serif";
+        document.getElementById('nickname').innerHTML = "Bashar";
+        document.getElementById('favorites').innerHTML = "Fussball";
+        document.getElementById('hometown').textContent = "Sawan"; // innerHTML=textContent
+
+        var items = document.getElementsByTagName('li');
+        for (i = 0; i < items.length; i++) {
+            items[i].className = 'list-item';
+        }
+        var image = document.createElement('img');
+        image.src = "https://static.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg";
+        javaimage.appendChild(image);
+
+        var books = [{
+            title: 'The Design of EveryDay Things',
+            author: 'Don Norman',
+            alreadyRead: false
+        }, {
+            title: 'The Most Human Human',
+            author: 'Brian Christian',
+            alreadyRead: true
+        }];
+
+        var bookList = document.getElementById('my_books');
+        for (i = 0; i < books.length; i++) {
+            var bookLi = document.createElement('li');
+            var bookDes = document.createTextNode(books[i].title + ' by ' + books[i].author);
+            bookLi.appendChild(bookDes);
+            bookList.appendChild(bookLi);
+        }
+
+    </script>
+
+</body>
+
+<br>
+
+</html>

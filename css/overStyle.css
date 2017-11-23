@@ -10,3 +10,9 @@
 #logo-container{
     height: 64px;
 }
+.parallax-container{
+    margin: 50px;
+}
+.container-footer {
+    text-align: center;
+}
